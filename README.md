@@ -45,6 +45,13 @@ npm install
 ```bash
 npm start
 ```
+
+## 🐳 Run with Docker
+```bash
+docker build -t portfolio-app .
+docker run -p 3000:80 portfolio-app
+```
+
 ### 📬 Contact
 
 Feel free to reach out:
