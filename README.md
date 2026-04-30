@@ -23,12 +23,6 @@ A modern and responsive personal portfolio website built to showcase my projects
 
 ---
 
-## 📸 Screenshots
-
-(Add screenshots here after deployment)
-
----
-
 ## 🧑‍💻 Getting Started
 
 ### Clone the repository
