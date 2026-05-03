@@ -10,11 +10,11 @@ const certs = [
     color: "#4DFFB4",
   },
   {
-    title: "Operating Systems",
+    title: "Walmart Advanced Software Engineering",
     issuer: "Cisco",
     year: "2025",
-    description: "Deep dive into OS fundamentals: processes, threads, memory management, scheduling.",
-    badge: "OS",
+    description: "Solving real world software engineering problems at Walmart Global tech",
+    badge: "SE",
     color: "#FFD14D",
   },
   {
