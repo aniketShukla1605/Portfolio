@@ -11,7 +11,7 @@ const certs = [
   },
   {
     title: "Walmart Advanced Software Engineering",
-    issuer: "Cisco",
+    issuer: "Walmart Global Tech",
     year: "2025",
     description: "Solving real world software engineering problems at Walmart Global tech",
     badge: "SE",
