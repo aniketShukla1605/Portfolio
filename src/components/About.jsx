@@ -17,9 +17,9 @@ export default function About() {
 
   const stats = [
     { number: "5+", label: "Certifications" },
-    { number: "4", label: "Projects Completed" },
+    { number: "5+", label: "Projects Completed" },
     { number: "5+", label: "Technologies" },
-    { number: "∞", label: "Coffee Consumed" },
+    { number: "∞", label: "Tea Consumed" },
   ];
 
   return (
