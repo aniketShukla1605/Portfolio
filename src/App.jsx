@@ -45,7 +45,7 @@ function CustomCursor() {
           background: "#FF4D1C",
           borderRadius: "50%",
           pointerEvents: "none",
-          zIndex: 9999,
+          zIndex: 100000,  
           mixBlendMode: "difference",
         }}
       />
@@ -58,7 +58,7 @@ function CustomCursor() {
           border: "1px solid rgba(255,77,28,0.5)",
           borderRadius: "50%",
           pointerEvents: "none",
-          zIndex: 9998,
+          zIndex: 99999, 
           transition: "transform 0.1s ease",
         }}
       />
