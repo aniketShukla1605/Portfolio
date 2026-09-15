@@ -57,8 +57,8 @@ function ResumeModal({ onClose }) {
     };
   }, [onClose]);
 
-  const RESUME_IMAGE_URL = "https://res.cloudinary.com/dolfdzaf2/image/upload/v1779119513/MyResume_fzqh64.jpg";
-  const RESUME_DOCX_URL  = "https://res.cloudinary.com/dolfdzaf2/raw/upload/v1779121953/MyResume_r5bkpo.docx";
+  const RESUME_IMAGE_URL = "https://res.cloudinary.com/dolfdzaf2/image/upload/v1789442750/Aniket_Shukla_Resume_wh7ipz.jpg";
+  const RESUME_DOCX_URL  = "https://res.cloudinary.com/dolfdzaf2/raw/upload/v1789442711/Aniket_Shukla_Resume_qmythq.docx";
 
   return (
     <div
