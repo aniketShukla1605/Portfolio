@@ -2,28 +2,40 @@ import { useEffect, useRef } from "react";
 
 const certs = [
   {
+    title: "Google AI Certificate",
+    issuer: "Google",
+    year: "2026",
+    description: "Credential for completing Google's AI Engineer Professional Certificate program.",
+    badge: "GA",
+    color: "#FF4D1C",
+    url: "https://www.coursera.org/account/accomplishments/professional-cert/certificate/7KL7F2YBHJZX",
+  },
+  {
     title: "JPMorgan Chase Job Simulation",
     issuer: "Forage / JPMorgan Chase",
     year: "2026",
     description: "Hands-on software engineering tasks simulating real work at JPMorgan Chase & Co.",
     badge: "JP",
     color: "#4DFFB4",
+    url: "https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_69801f68ddd4d05f44837cea_1770096116095_completion_certificate.pdf",
   },
   {
     title: "Walmart Advanced Software Engineering",
     issuer: "Walmart Global Tech",
-    year: "2025",
+    year: "2026",
     description: "Solving real world software engineering problems at Walmart Global tech",
     badge: "SE",
     color: "#FFD14D",
+    url: "https://www.theforage.com/completion-certificates/prBZoAihniNijyD6d/oX6f9BbCL9kJDJzfg_prBZoAihniNijyD6d_69801f68ddd4d05f44837cea_1777735692156_completion_certificate.pdf",
   },
   {
     title: "Cyber Security",
     issuer: "Cisco",
-    year: "2024",
+    year: "2025",
     description: "Core concepts of network security, cryptography, ethical hacking, and threat mitigation.",
     badge: "CS",
-    color: "#FF4D1C",
+    color: "#BD8CF7",
+    url: "https://www.credly.com/badges/516b57ed-3e66-42e1-8247-3344bd1d999c",
   },
 ];
 
@@ -83,10 +95,7 @@ export default function Certifications() {
         Certifications
       </h2>
 
-      <div style={{
-        position: "relative",
-        maxWidth: "800px",
-      }}>
+      <div style={{ position: "relative", maxWidth: "800px" }}>
         {/* Timeline line */}
         <div style={{
           position: "absolute",
@@ -128,10 +137,15 @@ export default function Certifications() {
               {cert.badge}
             </div>
 
-            {/* Content */}
-            <div
+            {/* Content (clickable) */}
+            <a
+              href={cert.url}
+              target="_blank"
+              rel="noreferrer"
               style={{
                 flex: 1,
+                display: "block",
+                textDecoration: "none",
                 background: "#0F0F0F",
                 border: "1px solid rgba(255,255,255,0.05)",
                 padding: "28px 32px",
@@ -140,10 +154,12 @@ export default function Certifications() {
               onMouseEnter={e => {
                 e.currentTarget.style.borderColor = cert.color + "44";
                 e.currentTarget.style.transform = "translateX(4px)";
+                e.currentTarget.querySelector(".verify").style.color = cert.color;
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.borderColor = "rgba(255,255,255,0.05)";
                 e.currentTarget.style.transform = "translateX(0)";
+                e.currentTarget.querySelector(".verify").style.color = "#444";
               }}
             >
               <div style={{
@@ -186,10 +202,24 @@ export default function Certifications() {
                 fontSize: "14px",
                 lineHeight: 1.7,
                 color: "#555",
+                marginBottom: "20px",
               }}>
                 {cert.description}
               </p>
-            </div>
+              <div
+                className="verify"
+                style={{
+                  fontFamily: "'DM Mono', monospace",
+                  fontSize: "11px",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  color: "#444",
+                  transition: "color 0.3s ease",
+                }}
+              >
+                Verify credential ↗
+              </div>
+            </a>
           </div>
         ))}
       </div>

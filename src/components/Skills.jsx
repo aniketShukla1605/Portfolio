@@ -14,7 +14,7 @@ const skillGroups = [
   {
     label: "Backend",
     icon: "⬡",
-    skills: ["Spring Boot", "REST APIs", "Microservices", "MySQL", "MongoDB"],
+    skills: ["Spring Boot", "REST APIs", "Microservices", "FastAPI", "SQL", "MongoDB"],
   },
   {
     label: "Tools & Dev",
