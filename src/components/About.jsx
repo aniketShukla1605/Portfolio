@@ -16,9 +16,9 @@ export default function About() {
   }, []);
 
   const stats = [
-    { number: "5+", label: "Certifications" },
-    { number: "5+", label: "Projects Completed" },
-    { number: "5+", label: "Technologies" },
+    { number: "7+", label: "Certifications" },
+    { number: "6+", label: "Projects Completed" },
+    { number: "22+", label: "Technologies & Tools" },
     { number: "∞", label: "Tea Consumed" },
   ];
 
