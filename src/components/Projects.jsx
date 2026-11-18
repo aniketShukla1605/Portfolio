@@ -36,7 +36,16 @@ const projects = [
     tag: "Core",
     year: "2025",
     link: "https://github.com/aniketShukla1605/Blood-Bank"
-  }
+  },
+  {
+    id: 5,
+    title: "JobSheild",
+    description: "Intelligent investigation platform that helps students, freshers, and job seekers evaluate the legitimacy, reputation, and authenticity of companies, recruiters, job postings, and internship offers.",
+    tech: ["Java", "Spring AI", "React", "PostgreSQL", "H2"],
+    tag: "Full Stack + AI",
+    year: "2026",
+    link: "https://github.com/aniketShukla1605/JobSheild",
+  },
 ];
 
 function ProjectCard({ project, index }) {
@@ -46,11 +55,20 @@ function ProjectCard({ project, index }) {
   return (
     <div
       className="reveal"
-      style={{ animationDelay: `${index * 0.1}s` }}
+      style={{
+        animationDelay: `${index * 0.1}s`,
+        height: "100%",
+        display: "flex",
+      }}
     >
       <a
         href={project.link}
-        style={{ textDecoration: "none", display: "block" }}
+        style={{
+          textDecoration: "none",
+          display: "flex",
+          flex: 1,
+          height: "100%",
+        }}
       >
         <div
           style={{
@@ -60,6 +78,11 @@ function ProjectCard({ project, index }) {
             transition: "all 0.4s cubic-bezier(0.25,0.46,0.45,0.94)",
             position: "relative",
             overflow: "hidden",
+            display: "flex",
+            flexDirection: "column",
+            minHeight: "420px",
+            boxSizing: "border-box",
+            width: "100%",
             height: "100%",
           }}
           onMouseEnter={e => {
@@ -166,6 +189,8 @@ function ProjectCard({ project, index }) {
             display: "flex",
             alignItems: "center",
             gap: "8px",
+            marginTop: "auto",
+            paddingTop: "24px",
           }}>
             View Project
             <span style={{ fontSize: "16px" }}>→</span>
@@ -196,13 +221,13 @@ export default function Projects() {
       id="projects"
       ref={sectionRef}
       style={{
-        padding: "120px 40px",
+        padding: "80px 40px",
         borderTop: "1px solid rgba(255,255,255,0.05)",
         background: "linear-gradient(to bottom, #0A0A0A, #0D0D0D)",
       }}
     >
       {/* Header */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "80px" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "56px" }}>
         <div>
           <div
             className="reveal"
@@ -248,13 +273,13 @@ export default function Projects() {
       </div>
 
       {/* Grid */}
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
-        gap: "24px",
-      }}>
+      <div className="projects-grid">
         {projects.map((p, i) => (
-          <ProjectCard key={p.id} project={p} index={i} />
+          <ProjectCard
+            key={p.id}
+            project={p}
+            index={i}
+          />
         ))}
       </div>
     </section>

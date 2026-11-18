@@ -158,3 +158,67 @@ body::before {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 24px;
+  max-width: 1500px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.projects-grid > * {
+  grid-column: span 2;
+  height: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Center the final two cards */
+.projects-grid > :nth-last-child(2):nth-child(3n + 1) {
+  grid-column: 2 / span 2;
+}
+
+.projects-grid > :last-child:nth-child(3n + 2) {
+  grid-column: 4 / span 2;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+  }
+
+  .projects-grid > * {
+    grid-column: auto;
+    min-height: 380px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .projects-grid > * {
+    grid-column: auto;
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .projects-grid > * {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid > * {
+    min-height: 360px;
+  }
+}
